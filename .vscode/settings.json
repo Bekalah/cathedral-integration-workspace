@@ -1,0 +1,155 @@
+{
+  // GitLens - Cathedral Integration Workspace Configuration
+  // Unified Wisdom, Science, Art, and Design
+  
+  // Core GitLens Settings
+  "gitlens.views.commits.files.layout": "tree",
+  "gitlens.views.commits.showTrackingBranch": true,
+  "gitlens.views.commits.avatars": true,
+  "gitlens.views.branches.avatars": true,
+  "gitlens.views.branches.files.layout": "list",
+  "gitlens.views.fileHistory.showTrackingBranch": true,
+  "gitlens.views.lineHistory.showTrackingBranch": true,
+  "gitlens.views.search.avatars": true,
+  
+  // Branch Configuration
+  "gitlens.gitCommands.closeDiffOnFocusOut": true,
+  "gitlens.gitCommands.diffTool": "vscode",
+  "gitlens.gitCommands.skipConfirmations": [
+    "apply-from-commit",
+    "create-branch",
+    "delete-branch",
+    "discard-changes",
+    "merge-branch",
+    "quick-open",
+    "remove-tracking-branch",
+    "rename-branch",
+    "reset-to-commit",
+    "revert-to-commit",
+    "stash",
+    "tag"
+  ],
+  
+  // AI Assistant Compliance
+  "gitlens.gitCommands.customCommands": [
+    {
+      "name": "hand: Human Signed Commit",
+      "command": "git commit",
+      "args": ["-m", "hand: {message}"],
+      "requireCommit": true,
+      "description": "Commits that are human-authored and verified"
+    }
+  ],
+  
+  // Cathedral Workspace Paths
+  "gitlens.searchCommits.ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/cathedral-unified/node_modules/**",
+    "**/.turbo/**"
+  ],
+  
+  // Commit Message Validation
+  "gitlens.commits.signatureValidation": true,
+  "gitlens.commits.branchPattern": "^(main|master-v1|hand:|feature:|hotfix:|dependabot/)",
+  
+  // Turbo Integration
+  "gitlens.turboPaths": [
+    "cathedral-unified/**",
+    "dist/**",
+    ".turbo/**"
+  ],
+  
+  // Sacred Geometry and Cathedral Files
+  "gitlens.specialFiles": [
+    "**/sacred-geometry-foundation.js",
+    "**/cathedral-*.js",
+    "**/*-sacred-*.js",
+    "**/AI_AGENT_SELF_RULES.md",
+    "**/AI_ASSISTANT_INCIDENT_REPORT.md",
+    "**/HOW_TO_WORK_WITH_AI_ASSISTANTS.md"
+  ],
+  
+  // Workspace and File History
+  "gitlens.fileHistory.showTrackingBranch": true,
+  "gitlens.lineHistory.showTrackingBranch": true,
+  
+  // Pull Request Configuration
+  "gitlens.pullRequests.avatars": true,
+  "gitlens.pullRequests.files.layout": "tree",
+  "gitlens.pullRequests.showTrackingBranch": true,
+  
+  // Status Bar Configuration
+  "gitlens.statusBar.enabled": true,
+  "gitlens.statusBar.command": "gitlens.showQuickCommitDetails",
+  "gitlens.statusBar.alignment": "right",
+  
+  // Code Review Integration
+  "gitlens.codeReview.enabled": true,
+  "gitlens.codeReview.showInStatusBar": true,
+  
+  // Blame Configuration
+  "gitlens.blame.compact": false,
+  "gitlens.blame.heatmap.enabled": true,
+  "gitlens.blame.heatmap.location": "right",
+  "gitlens.blame.annotations.file": "hover",
+  "gitlens.blame.annotations.line": "hover",
+  "gitlens.blame.annotations.scrollable": true,
+  
+  // Commit Signing for Human Verification
+  "gitlens.gpg.enabled": true,
+  "gitlens.gpg.requireSigningKey": false,
+  
+  // Cathedral Scope Recognition
+  "gitlens.views.remotes.showUpstreamStatus": true,
+  "gitlens.views.remotes.avatars": true,
+  "gitlens.views.remotes.layout": "tree",
+  
+  // AI Incident Tracking
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitNotFoundWarning": true,
+    "suppressNoRepositoryWarning": true,
+    "suppressLineUncommittedWarning": true,
+    "suppressGitDisabledWarning": true,
+    "suppressGitVersionWarning": true
+  },
+  
+  // Cathedral Branch Management
+  "gitlens.advanced.similarityThreshold": 0.8,
+  "gitlens.advanced.cache": {
+    "enabled": true,
+    "keepDays": 30,
+    "size": 500
+  },
+  
+  // Workspace Configuration for Cathedral Integration
+  "gitlens.workspace.cathedral-unified": {
+    "paths": [
+      "cathedral-unified/**/*.js",
+      "cathedral-unified/**/*.json",
+      "cathedral-unified/**/*.md"
+    ],
+    "ignoredPaths": [
+      "cathedral-unified/node_modules/**",
+      "cathedral-unified/dist/**"
+    ]
+  },
+  
+  // Terminal Integration (following rules about latest stable versions)
+  "gitlens.terminal.integrated.enabled": true,
+  "gitlens.terminal.external.diff": "vscode",
+  
+  // OpenSpec Compliance Settings
+  "gitlens.advanced.fileLoggingLevel": "warn",
+  "gitlens.advanced.outputLoggingLevel": "warn",
+  
+  // Source Control Icons Theme
+  "gitlens.views.branches.showIcon": true,
+  "gitlens.views.commits.showIcon": true,
+  "gitlens.views.fileHistory.showIcon": true,
+  "gitlens.views.lineHistory.showIcon": true,
+  "gitlens.views.remotes.showIcon": true,
+  "gitlens.views.stashes.showIcon": true,
+  "gitlens.views.tags.showIcon": true
+}

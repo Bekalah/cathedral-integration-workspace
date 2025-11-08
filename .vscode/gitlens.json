@@ -1,0 +1,119 @@
+{
+  // GitLens Branch Configuration for Cathedral Integration Workspace
+  // Matches Turbo configuration and Unified Wisdom, Science, Art, Design mission
+  
+  "extensions.showRecommendations": false,
+  "extensions.experimental.affinity": {
+    "eamodio.gitlens": 1
+  },
+  
+  // Branch Strategy Configuration
+  "gitlens.advanced.repositoryPath": "./",
+  "gitlens.advanced.maxCommits": 500,
+  "gitlens.advanced.maxLineHistory": 500,
+  "gitlens.advanced.maxSearchItems": 1000,
+  
+  // Cathedral Branch Patterns
+  "gitlens.advanced.branches.branchMatchingPatterns": [
+    "main",
+    "master-v1", 
+    "develop",
+    "hand:*",
+    "feature:*",
+    "hotfix:*",
+    "dependabot/*"
+  ],
+  
+  // Turbo Workspace Integration
+  "gitlens.turbo.integrated": true,
+  "gitlens.turbo.cache.enabled": true,
+  "gitlens.turbo.cache.size": 100,
+  "gitlens.turbo.cache.keepDays": 7,
+  
+  // Cathedral File Recognition
+  "gitlens.advanced.customPatterns": [
+    {
+      "name": "Sacred Geometry Files",
+      "pattern": "**/*sacred*geometry*",
+      "icon": "🏛️"
+    },
+    {
+      "name": "Cathedral Files", 
+      "pattern": "**/cathedral-*.js",
+      "icon": "🏛️"
+    },
+    {
+      "name": "AI Assistant Files",
+      "pattern": "**/AI_*.md",
+      "icon": "🤖"
+    },
+    {
+      "name": "Turbo Files",
+      "pattern": "turbo.json",
+      "icon": "⚡"
+    },
+    {
+      "name": "Package Manager Files",
+      "pattern": "package.json",
+      "icon": "📦"
+    }
+  ],
+  
+  // Workflow Integration
+  "gitlens.workflow.integrated": true,
+  "gitlens.workflow.branchProtection": {
+    "protected": [
+      "main",
+      "master-v1"
+    ],
+    "requireHumanSignoff": [
+      "hand:*"
+    ]
+  },
+  
+  // Code Review Configuration
+  "gitlens.review.integrated": true,
+  "gitlens.review.requireHumanApproval": true,
+  "gitlens.review.requireSLA": "24h",
+  
+  // Cathedral Integration Workspace Specific
+  "gitlens.cathedral.integrated": true,
+  "gitlens.cathedral.unifiedWisdomEnabled": true,
+  "gitlens.cathedral.artEnabled": true,
+  "gitlens.cathedral.scienceEnabled": true,
+  "gitlens.cathedral.designEnabled": true,
+  "gitlens.cathedral.alchemyEnabled": true,
+  "gitlens.cathedral.hermeticismEnabled": true,
+  "gitlens.cathedral.kabbalahEnabled": true,
+  "gitlens.cathedral.reikiEnabled": true,
+  "gitlens.cathedral.esotericWisdomEnabled": true,
+  "gitlens.cathedral.anthropologyEnabled": true,
+  "gitlens.cathedral.physicsEnabled": true,
+  "gitlens.cathedral.mathematicsEnabled": true,
+  "gitlens.cathedral.architectureEnabled": true,
+  "gitlens.cathedral.traditionalArtEnabled": true,
+  "gitlens.cathedral.modernArtEnabled": true,
+  "gitlens.cathedral.secretTeachingsEnabled": true,
+  
+  // Performance Optimization
+  "gitlens.advanced.decorations": {
+    "enabled": true,
+    "badges": true,
+    "heatmap": true
+  },
+  
+  // AI Assistant Prevention Settings
+  "gitlens.ai.assistantDetection": {
+    "enabled": true,
+    "preventAiCommits": true,
+    "requireHumanSignature": true,
+    "alertOnAiDetected": true
+  },
+  
+  // Commit Message Standards
+  "gitlens.commits.messageValidation": {
+    "enabled": true,
+    "pattern": "^(hand:|feature:|hotfix:|dependabot/)",
+    "requireHandPrefix": true
+  }
+}
