@@ -1,0 +1,55 @@
+{
+  // GitLens Trial - Essential Workflow Organization
+  // Cathedral Integration Workspace
+  
+  // Core Git operations for trial period
+  "gitlens.views.commits.files.layout": "tree",
+  "gitlens.views.branches.files.layout": "list",
+  "gitlens.views.fileHistory.showTrackingBranch": true,
+  "gitlens.views.lineHistory.showTrackingBranch": true,
+  
+  // Quick actions for your workflow
+  "gitlens.gitCommands.skipConfirmations": [
+    "quick-open",
+    "create-branch",
+    "delete-branch", 
+    "merge-branch",
+    "reset-to-commit",
+    "revert-to-commit"
+  ],
+  
+  // Track your current branch structure
+  "gitlens.commits.showTrackingBranch": true,
+  "gitlens.advanced.maxCommits": 200,
+  "gitlens.advanced.maxLineHistory": 100,
+  
+  // Essential status bar
+  "gitlens.statusBar.enabled": true,
+  "gitlens.statusBar.command": "gitlens.showQuickCommitDetails",
+  "gitlens.statusBar.alignment": "right",
+  
+  // Ignore build/cache files
+  "gitlens.searchCommits.ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**", 
+    "**/.turbo/**",
+    "**/cathedral-unified/node_modules/**"
+  ],
+  
+  // File annotations
+  "gitlens.blame.compact": false,
+  "gitlens.blame.heatmap.enabled": true,
+  "gitlens.blame.heatmap.location": "right",
+  "gitlens.blame.annotations.file": "hover",
+  "gitlens.blame.annotations.line": "hover",
+  
+  // Branch patterns for your project
+  "gitlens.advanced.customCommands": [
+    {
+      "name": "Hand Commit",
+      "command": "git commit",
+      "args": ["-m", "hand: {message}"],
+      "requireCommit": true
+    }
+  ]
+}
