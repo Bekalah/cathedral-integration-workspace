@@ -3,8 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build", "type-check"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "cathedral-unified/dist/**"],
       "env": ["NODE_ENV", "CI", "TURBO_TOKEN", "TURBO_TEAM"]
     },
     "dev": {
@@ -12,16 +11,14 @@
       "persistent": true
     },
     "test": {
-      "dependsOn": ["^build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx", "cathedral-unified/**/*.js", "*.js"],
       "outputs": ["coverage/**"]
     },
     "lint": {
-      "dependsOn": ["^build"]
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "cathedral-unified/**/*.js", "*.js"]
     },
     "type-check": {
-      "dependsOn": ["^build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tsconfig.json"]
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tsconfig.json", "cathedral-unified/**/*.js", "*.js"]
     },
     "clean": {
       "cache": false
