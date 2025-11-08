@@ -4,7 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build", "type-check"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "cathedral-unified/dist/**"],
       "env": ["NODE_ENV", "CI", "TURBO_TOKEN", "TURBO_TEAM"]
     },
     "dev": {
@@ -13,7 +13,7 @@
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx", "cathedral-unified/**/*.js"],
       "outputs": ["coverage/**"]
     },
     "lint": {
@@ -21,7 +21,7 @@
     },
     "type-check": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tsconfig.json"]
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tsconfig.json", "cathedral-unified/**/*.js"]
     },
     "clean": {
       "cache": false
@@ -35,7 +35,8 @@
     "package.json",
     "tsconfig.json",
     ".eslintrc.cjs",
-    "turbo.json"
+    "turbo.json",
+    "cathedral-unified/package.json"
   ],
   "globalEnv": [
     "NODE_ENV",
