@@ -111,6 +111,7 @@ jobs:
         with:
           name: build-output
           path: |
-            packages/*/dist
-            apps/*/dist
+            cathedral-unified/dist
+            dist
+            .turbo
           retention-days: 7
