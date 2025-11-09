@@ -4,9 +4,13 @@
     "version": "1.0.0",
     "description": "Master registry tracking all repositories in the Cathedral of Circuits ecosystem",
     "created": "2025-01-13",
-    "last_updated": "2025-01-13",
+    "last_updated": "2025-11-09",
     "total_repositories": 8,
     "ecosystem_status": "active",
+    "audit_completed": "2025-11-09T00:32:24.513Z",
+    "cleanup_performed": true,
+    "local_repositories_found": 2,
+    "missing_repositories": 6,
     "repositories": {
       "cathedral-monorepo": {
         "name": "Cathedral Monorepo",
@@ -170,9 +174,9 @@
         "status": "active",
         "version": "1.0.0",
         "deployment": {
-          "platform": "local-workspace",
-          "url": "file:///Users/rebeccalemke/Library/Mobile%20Documents/com~apple~CloudDocs/cathedral-integration-workspace",
-          "status": "active"
+          "platform": "github-pages",
+          "url": "https://cathedralofcircuits.github.io/cathedral-integration-workspace",
+          "status": "pending_push"
         },
         "dependencies": [
           "cathedral-monorepo",
@@ -182,7 +186,28 @@
           "liber-arcanae"
         ],
         "technologies": ["git", "workspace-management"],
-        "last_commit": "pending_check"
+        "last_commit": "aca8103",
+        "local_status": "present",
+        "pending_commits": 15
+      },
+      "cathedral-unified": {
+        "name": "Cathedral Unified",
+        "description": "Core unified components for Cathedral ecosystem",
+        "url": "https://github.com/Bekalah/cathedral-unified",
+        "local_path": "./cathedral-unified",
+        "component_type": "core-components",
+        "status": "active",
+        "version": "1.0.0",
+        "deployment": {
+          "platform": "vercel",
+          "url": "https://cathedral-unified.vercel.app",
+          "status": "needs_setup"
+        },
+        "dependencies": [],
+        "technologies": ["nodejs", "turbo", "monorepo"],
+        "last_commit": "unknown",
+        "local_status": "present",
+        "subdirectory": true
       }
     },
     "deployment_targets": {
